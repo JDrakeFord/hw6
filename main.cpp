@@ -4,9 +4,17 @@ using namespace std;
 
 int main()
 {
-    cout << "Homework 6 written by YOUR NAME.\n";
+    cout << "Homework 6 written by Jesse Ford." << endl;
     Ledger test;
-    test.printContents();
+    test.addToFile("Potato", 1569.69, "JessiesAccount.txt");
+    test.readFile("JessiesAccount.txt");
+    test.printContents(); cout << endl;
+    test.correctCropType("Potato", 4);
+    test.printContents(); cout << endl;
+    test.generateStats("Output.txt");
+
+
+
 
     return 0;
 }

@@ -12,7 +12,14 @@ public:
     ~Ledger();
     Ledger(Ledger &original);
     void printContents() const;
-    void readFile(string const file);
+    void readFile(string file);
+    void generateStats(string fileName) const;
+    bool validAmount(float amount) const;
+    bool validCrop(string crop) const;
+    float calculateAverage() const;
+    void countCrops(int &potatoCount, int &beetCount, int &pumpkinCount, int &wheatCount) const;
+    static void addToFile(string crop, float amount, string fileName);
+    void correctCropType(string crop, int index);
 
 private:
     static const int MAX_CROPS = 15; // the maximum number of crops
